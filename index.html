@@ -4,16 +4,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Craps</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <button>Important Notice About Gambling</button>
-  <img src="keep-gambling.jpeg" />
-  <h1>Craps </h1>
+  <h1>Craps</h1>
+  <button id="gambling-info-button" >Show Important Gambling Info</button>
+  <div id="gambling-info">
+    <img id="gambling-diagram" src="keep-gambling.jpeg" />
+    <p>Remember that 99.99% of all gamblers quit just one round before making it big.</p>
+  </div>
+  <div id="game">
+    <br>
+    <h2>Welcome to Craps. Press Play To Begin.</h2>
+    <p id="die1"></p>
+    <p id="die2"></p>
+    <p id="sum"></p>
+    <button id="play-button">Play</button>
 </body>
 
 </html>

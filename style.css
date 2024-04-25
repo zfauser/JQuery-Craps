@@ -1,4 +1,32 @@
 html {
   height: 100%;
   width: 100%;
+  text-align: center;
+}
+
+#gambling-info-button {
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+/* Animation for the play button was inspired by: https://stackoverflow.com/questions/62915828/how-can-i-create-a-smooth-blink-fading-between-two-colors */
+/* Idea for animation was inspired by: Nathan Kozlov */
+#play-button {
+  background: red;
+  color: white;
+  padding: 10px 10px;
+  animation: blink 3s infinite alternate-reverse;
+  cursor: pointer;
+}
+@keyframes blink {
+  14%{background: red;}
+  28%{background: orange;}
+  42%{background: yellow;}
+  56%{background: green;}
+  70%{background: blue;}
+  84%{background: indigo;}
+  100%{background: violet;}
+}
+#play-button:hover {
+  padding: 15px 15px;
 }
