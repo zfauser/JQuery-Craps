@@ -2,31 +2,130 @@ html {
   height: 100%;
   width: 100%;
   text-align: center;
+  color: white;
+  background: black;
+  font-family: 'Helvetica', sans-serif;
 }
 
 #gambling-info-button {
-  background: blue;
+  background: grey;
   color: white;
+  border: 1px solid white;
+  border-radius: 15px;  
   cursor: pointer;
 }
-/* Animation for the play button was inspired by: https://stackoverflow.com/questions/62915828/how-can-i-create-a-smooth-blink-fading-between-two-colors */
-/* Idea for animation was inspired by: Nathan Kozlov */
 #play-button {
   background: red;
+  box-shadow: 0 0 40px red;
+  border: 1px solid white;
   color: white;
-  padding: 10px 10px;
-  animation: blink 3s infinite alternate-reverse;
+  width: 80px;
+  height: 32.5px;
+  border-radius: 15px;
+  animation: blink 3s infinite alternate, pulse 1s infinite alternate, glow 3s infinite alternate;
   cursor: pointer;
 }
-@keyframes blink {
-  14%{background: red;}
-  28%{background: orange;}
-  42%{background: yellow;}
-  56%{background: green;}
-  70%{background: blue;}
-  84%{background: indigo;}
-  100%{background: violet;}
+
+#roll-button {
+  background: white;
+  box-shadow: 0 0 40px white;
+  border: 1px solid black;
+  color: black;
+  width: 65px;
+  height: 32.5px;
+  border-radius: 15px;
+  cursor: pointer;
 }
-#play-button:hover {
-  padding: 15px 15px;
+
+#welcome {
+  color: red;
+  animation: blink-text 3s infinite alternate, pulse 1s infinite alternate;
+}
+
+/* The 'blink' Animation for the play button was inspired by: https://stackoverflow.com/questions/62915828/how-can-i-create-a-smooth-blink-fading-between-two-colors */
+/* Idea for animation was inspired by: Nathan Kozlov */
+@keyframes blink {
+  0% {
+    background: red;
+  }
+  14% {
+    background: orange;
+  }
+  28% {
+    background: yellow;
+  }
+  42% {
+    background: lime;
+  }
+  56% {
+    background: blue;
+  }
+  70% {
+    background: indigo;
+  }
+  84% {
+    background: violet;
+  }
+}
+
+@keyframes blink-text {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: lime;
+  }
+  56% {
+    color: blue;
+  }
+  70% {
+    color: indigo;
+  }
+  84% {
+    color: violet;
+  }
+
+}
+
+/* The next two animations are from: https://codepen.io/davideast/pen/MWxvzjm */
+@keyframes pulse {
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 40px red;
+  }
+  14% {
+    box-shadow: 0 0 40px orange;
+  }
+  28% {
+    box-shadow: 0 0 40px yellow;
+  }
+  42% {
+    box-shadow: 0 0 40px green;
+  }
+  56% {
+    box-shadow: 0 0 40px blue;
+  }
+  70% {
+    box-shadow: 0 0 40px indigo;
+  }
+  84% {
+    box-shadow: 0 0 40px violet;
+  }
+}
+
+.die-image {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
