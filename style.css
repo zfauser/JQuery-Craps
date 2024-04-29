@@ -15,15 +15,24 @@ html {
   cursor: pointer;
 }
 #play-button {
-  background: red;
-  box-shadow: 0 0 40px red;
   border: 1px solid white;
   color: white;
   width: 80px;
   height: 32.5px;
   border-radius: 15px;
+}
+
+.play-button-active {
+  background: red;
+  box-shadow: 0 0 40px red;
   animation: blink 3s infinite alternate, pulse 1s infinite alternate, glow 3s infinite alternate;
   cursor: pointer;
+}
+
+.play-button-inactive {
+  background: grey;
+  color: black;
+  box-shadow: 0 0 40px grey;
 }
 
 #roll-button {
@@ -40,6 +49,14 @@ html {
 #welcome {
   color: red;
   animation: blink-text 3s infinite alternate, pulse 1s infinite alternate;
+}
+
+#enterBetTitle {
+  animation: pulse 1s infinite alternate;
+}
+
+#balance {
+  color: white;
 }
 
 /* The 'blink' Animation for the play button was inspired by: https://stackoverflow.com/questions/62915828/how-can-i-create-a-smooth-blink-fading-between-two-colors */
@@ -111,7 +128,7 @@ html {
     box-shadow: 0 0 40px yellow;
   }
   42% {
-    box-shadow: 0 0 40px green;
+    box-shadow: 0 0 40px lime;
   }
   56% {
     box-shadow: 0 0 40px blue;

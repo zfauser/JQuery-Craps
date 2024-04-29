@@ -21,13 +21,19 @@
   <div id="game">
     <br>
     <h2 id="welcome">Welcome to Craps. Press Play To Begin.</h2>
+    <h2 id="balance">Balance: 100 Smarties</h2>
+    <h2 id="bet-title">Bet: 0 Smarties</h2>
     <img class="die-image" id="die1-image" src="dice-images/1.png" />
     <img class="die-image" id="die2-image" src="dice-images/1.png" />
     <p id="die1"></p>
     <p id="die2"></p>
+    <p id="enterBetTitle">Enter Your Bet</p>
+    <input id="bet" min="0" type="number" placeholder="Enter your bet" />
     <p id="sum"></p>
+    <p id="winning-numbers">If you roll a 7 or 11 you win!</p>
+    <p id="losing-numbers">If you roll a 2, 3, or 12 you lose!</p>
     <br>
-    <button id="play-button"> <span>Play</span> </button>
+    <button id="play-button" class="play-button-active">Play</button>
 </body>
 
 </html>
