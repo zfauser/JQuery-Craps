@@ -64,6 +64,8 @@ function onWin() {
   $("#play-button").text("Game Over");
   $("#balance").text("Balance: " + balance + " Smarties");
   $("#win-modal").modal();
+
+  // Adapted this answer in order to get the audio to work: https://stackoverflow.com/a/15888798
   $("#player-wins-audio").get(0).play();
 }
 
@@ -73,6 +75,8 @@ function onLose() {
   $("#play-button").addClass("play-button-inactive");
   $("#play-button").text("Game Over");
   $("#lose-modal").modal();
+
+  // Adapted this answer in order to get the audio to work: https://stackoverflow.com/a/15888798
   $("#player-loses-audio").get(0).play();
 }
 
@@ -195,7 +199,7 @@ function onPlayButtonClick() {
   }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
   $("#gambling-info").hide();
   $("#enterBetTitle").hide();
   $("#bet").hide();
@@ -211,7 +215,7 @@ $(document).ready(function () {
   $("#bet").change(onBetChange);
 
   // adapted this line of code from the libraries GitHub Repo: https://github.com/kylefox/jquery-modal#:~:text=%24(%27%23purchase%2Dform%27).on(%24.modal.BEFORE_CLOSE%2C%20function(event%2C%20modal)%20%7B%0A%20%20clear_shopping_cart()%3B%0A%7D)%3B
-  $(".modal").on($.modal.AFTER_CLOSE, function (event, modal) {
+  $(".modal").on($.modal.AFTER_CLOSE, function(event, modal) {
     playAgain();
   });
 });

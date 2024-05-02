@@ -11,9 +11,10 @@ html {
   background: grey;
   color: white;
   border: 1px solid white;
-  border-radius: 15px;  
+  border-radius: 15px;
   cursor: pointer;
 }
+
 #play-button {
   border: 1px solid white;
   color: white;
@@ -65,21 +66,27 @@ html {
   0% {
     background: red;
   }
+
   14% {
     background: orange;
   }
+
   28% {
     background: yellow;
   }
+
   42% {
     background: lime;
   }
+
   56% {
     background: blue;
   }
+
   70% {
     background: indigo;
   }
+
   84% {
     background: violet;
   }
@@ -89,21 +96,27 @@ html {
   0% {
     color: red;
   }
+
   14% {
     color: orange;
   }
+
   28% {
     color: yellow;
   }
+
   42% {
     color: lime;
   }
+
   56% {
     color: blue;
   }
+
   70% {
     color: indigo;
   }
+
   84% {
     color: violet;
   }
@@ -121,21 +134,27 @@ html {
   0% {
     box-shadow: 0 0 40px red;
   }
+
   14% {
     box-shadow: 0 0 40px orange;
   }
+
   28% {
     box-shadow: 0 0 40px yellow;
   }
+
   42% {
     box-shadow: 0 0 40px lime;
   }
+
   56% {
     box-shadow: 0 0 40px blue;
   }
+
   70% {
     box-shadow: 0 0 40px indigo;
   }
+
   84% {
     box-shadow: 0 0 40px violet;
   }
