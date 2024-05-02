@@ -146,3 +146,16 @@ html {
   height: 100px;
   margin: 10px;
 }
+
+#win-modal {
+  background-color: red;
+  animation: blink 3s infinite alternate;
+  color: white;
+  text-align: center;
+}
+
+#lose-modal {
+  background-color: grey;
+  color: white;
+  text-align: center;
+}

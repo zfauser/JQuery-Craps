@@ -1,3 +1,5 @@
+<!-- TODO: Add saving the balance to local storage, if user has no money let them reset, quick play -->
+
 <!DOCTYPE html>
 <html>
 
@@ -6,17 +8,26 @@
   <meta name="viewport" content="width=device-width">
   <title>Craps</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- FROM: https://www.jquerymodal.com/ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <!-- FROM: https://www.jquerymodal.com/ -->
+
   <script src="script.js"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  
   <h1>Craps</h1>
   <button id="gambling-info-button" >Show Important Gambling Info</button>
   <div id="gambling-info">
     <img id="gambling-diagram" src="keep-gambling.jpeg" />
     <p>Remember that 99.99% of all gamblers quit just one round before making it big.</p>
   </div>
+
+  <!-- Audio made using https://elevenlabs.io/ -->
   <audio autoplay src="/audio/pressPlayToBegin.mp3"></audio>
   <div id="game">
     <br>
@@ -28,12 +39,25 @@
     <p id="die1"></p>
     <p id="die2"></p>
     <p id="enterBetTitle">Enter Your Bet</p>
-    <input id="bet" min="0" type="number" placeholder="Enter your bet" />
+    <input id="bet" min="1" type="number" placeholder="Enter your bet" />
     <p id="sum"></p>
     <p id="winning-numbers">If you roll a 7 or 11 you win!</p>
     <p id="losing-numbers">If you roll a 2, 3, or 12 you lose!</p>
+    
     <br>
     <button id="play-button" class="play-button-active">Play</button>
+    <div id="win-modal" class="modal">
+      <p>You Win!</p>
+
+      <!-- Audio made using https://elevenlabs.io/ -->
+      <audio src="/audio/playerWins.mp3" id="player-wins-audio" ></audio>
+    </div>
+    <div id="lose-modal" class="modal">
+      <p>You Lose :(</p>
+
+      <!-- Audio made using https://elevenlabs.io/ -->
+      <audio src="/audio/playerLoses.mp3" id="player-loses-audio" ></audio>
+    </div>
 </body>
 
 </html>
