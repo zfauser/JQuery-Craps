@@ -1,5 +1,3 @@
-<!-- TODO: Add saving the balance to local storage, if user has no money let them reset, quick play -->
-
 <!DOCTYPE html>
 <html>
 
@@ -21,10 +19,12 @@
 <body>
 
   <h1>Craps</h1>
-  <button id="gambling-info-button">Show Important Gambling Info</button>
-  <div id="gambling-info">
-    <img id="gambling-diagram" src="keep-gambling.jpeg" />
-    <p>Remember that 99.99% of all gamblers quit just one round before making it big.</p>
+  <button id="how-to-info-button">Show: How To Play</button>
+  <div id="how-to-info">
+    <h2>How do you play Craps?</h2>
+    <p>After clicking the 'Play' button, you will be asked to enter a bet. You begin with 100 Smarties. You then click on your desired game mode. The first option (Bet & Roll) is play where you must manually roll the dice each time. The second option is Quick Play, which you can learn more about by clicking the 'What is Quick Play?' button. After you have selected your game mode, the game will begin. Initially, if you roll a 7 or 11 you win! If you roll a 2, 3, or 12 you lose! If you roll any other number, that number becomes your 'point'. You must then roll that number again before rolling a 7 to win. If you roll a 7 before rolling your 'point' you lose.</p>
+    <h2>Important Gambling Info</h2>
+    <p>Remember that with gambling, <b>you will lose,</b> the house always wins in the end.</p>
   </div>
 
   <!-- Audio made using https://elevenlabs.io/ -->
@@ -32,31 +32,56 @@
   <div id="game">
     <br>
     <h2 id="welcome">Welcome to Craps. Press Play To Begin.</h2>
+    <h2 id="win-losses">Wins: 0, Losses: 0, Balance Resets: 0</h2>
     <h2 id="balance">Balance: 100 Smarties</h2>
     <h2 id="bet-title">Bet: 0 Smarties</h2>
+    <div id="quick-play-stats-modal" class="modal result">
+      <h2 id="quick-play-stats-title">Quick Play Stats:</h2>
+      <p id="quick-play-win-losses"></p>
+      <p id="quick-play-initial-bet"></p>
+      <p id="quick-play-new-total"></p>
+      <p id="quick-play-up-down"></p>
+    </div>
     <img class="die-image" id="die1-image" src="dice-images/1.png" />
     <img class="die-image" id="die2-image" src="dice-images/1.png" />
     <p id="die1"></p>
     <p id="die2"></p>
     <p id="enterBetTitle">Enter Your Bet</p>
     <input id="bet" min="1" type="number" placeholder="Enter your bet" />
+    <h2 id="bet-per-roll">Bet Per Roll: 0 Smarties</h2>
+    <p id="enterTurnsTitle">Enter The Number Of Times You Would Like To Play</p>
+    <input id="number-of-turns" min="1" type="number" placeholder="Enter number of times to play" />
     <p id="sum"></p>
     <p id="winning-numbers">If you roll a 7 or 11 you win!</p>
     <p id="losing-numbers">If you roll a 2, 3, or 12 you lose!</p>
-
-    <br>
     <button id="play-button" class="play-button-active">Play</button>
-    <div id="win-modal" class="modal">
-      <p>You Win!</p>
+    <br>
+    <div id="quick-play">
+      <h2 id="quick-play-text">OR</h2>
+      <button id="quick-play-button" disabled="disabled" class="play-button-inactive">Quick Play</button>
+      <br>
+      <br>
+      <button id="what-is-quick-play-button">What is Quick Play?</button>
+      <p id="quick-play-info">Quick Play will allow you to select the number of times you would like to play with a set bet, without having to manually roll each time</p>
+    </div>
+    <div id="win-modal" class="modal result">
+      <h1 id="win-modal-title"></h1>
+      <p id="win-modal-text"></p>
 
       <!-- Audio made using https://elevenlabs.io/ -->
       <audio src="/audio/playerWins.mp3" id="player-wins-audio"></audio>
     </div>
-    <div id="lose-modal" class="modal">
-      <p>You Lose :(</p>
+    <div id="lose-modal" class="modal result">
+      <h1 id="lose-modal-title"></h1>
+      <p id="lose-modal-text"></p>
 
       <!-- Audio made using https://elevenlabs.io/ -->
       <audio src="/audio/playerLoses.mp3" id="player-loses-audio"></audio>
+    </div>
+    <div id="out-of-money-modal" class="modal">
+      <h1 id="out-of-money-modal-title">You're Out Of Smarties!</h1>
+      <p id="out-of-money-modal-text">You need to reset your balance in order to continue playing. If you would no longer like to play, please close this webpage.</p>
+      <button id="reset-button">Reset Balance</button>
     </div>
 </body>
 

@@ -7,7 +7,14 @@ html {
   font-family: 'Helvetica', sans-serif;
 }
 
-#gambling-info-button {
+#how-to-info-button {
+  background: grey;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#what-is-quick-play-button {
   background: grey;
   color: white;
   border: 1px solid white;
@@ -16,6 +23,14 @@ html {
 }
 
 #play-button {
+  border: 1px solid white;
+  color: white;
+  width: 80px;
+  height: 32.5px;
+  border-radius: 15px;
+}
+
+#quick-play-button {
   border: 1px solid white;
   color: white;
   width: 80px;
@@ -53,6 +68,10 @@ html {
 }
 
 #enterBetTitle {
+  animation: pulse 1s infinite alternate;
+}
+
+#enterTurnsTitle {
   animation: pulse 1s infinite alternate;
 }
 
@@ -174,6 +193,18 @@ html {
 }
 
 #lose-modal {
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+#out-of-money-modal {
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+#quick-play-stats-modal {
   background-color: grey;
   color: white;
   text-align: center;
